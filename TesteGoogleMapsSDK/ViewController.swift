@@ -66,7 +66,9 @@ class ViewController: UIViewController {
                 
                 if index+1 > destination.endIndex-1{
                     let alert = UIAlertController(title: "FIM DO NEXT", message: "Não existe mais endereço!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+                        //self.viewDidLoad()
+                    }))
                     self.present(alert, animated: true, completion: nil)
                 }else{
                     currentDestination = destination[index+1]
